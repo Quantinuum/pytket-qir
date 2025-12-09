@@ -944,7 +944,7 @@ class AbstractQirGenerator:
                     ssa_args[0],
                 )
             case ClOp.RegDiv | ClOp.RegPow:
-                # https://github.com/CQCL/pytket-qir/issues/181
+                # https://github.com/Quantinuum/pytket-qir/issues/181
                 raise ValueError(f"Classical operation {expr_op} not supported")
             case _:
                 raise ValueError("Invalid classical operation")

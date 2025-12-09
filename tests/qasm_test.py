@@ -73,7 +73,7 @@ def test_pytket_qir_qasm_classical_1(profile: QIRProfile) -> None:
     ],
 )
 def test_bitreg_as_bit_1(profile: QIRProfile) -> None:
-    # https://github.com/CQCL/tket/issues/1896
+    # https://github.com/Quantinuum/tket/issues/1896
     qasm = """OPENQASM 2.0;
 include "hqslib1.inc";
 creg a[1];
@@ -97,7 +97,7 @@ a = a ^ b[0];
     ],
 )
 def test_bitreg_as_bit_2(profile: QIRProfile) -> None:
-    # https://github.com/CQCL/tket/issues/1896
+    # https://github.com/Quantinuum/tket/issues/1896
     qasm = """OPENQASM 2.0;
 include "hqslib1.inc";
 creg a[1];
@@ -121,7 +121,7 @@ a = a[0] ^ b[0];
     ],
 )
 def test_bitreg_as_bit_3(profile: QIRProfile) -> None:
-    # https://github.com/CQCL/tket/issues/1896
+    # https://github.com/Quantinuum/tket/issues/1896
     qasm = """OPENQASM 2.0;
 include "hqslib1.inc";
 creg a[1];
@@ -145,7 +145,7 @@ a[0] = a[0] ^ b[0];
     ],
 )
 def test_bitreg_as_bit_4(profile: QIRProfile) -> None:
-    # https://github.com/CQCL/tket/issues/1896
+    # https://github.com/Quantinuum/tket/issues/1896
     qasm = """OPENQASM 2.0;
 include "hqslib1.inc";
 creg a[1];
@@ -169,7 +169,7 @@ a[0] = a ^ b[0];
     ],
 )
 def test_bitreg_as_bit_5(profile: QIRProfile) -> None:
-    # https://github.com/CQCL/tket/issues/1896
+    # https://github.com/Quantinuum/tket/issues/1896
     qasm = """OPENQASM 2.0;
 include "hqslib1.inc";
 creg a[1];
@@ -193,7 +193,7 @@ a = a + b[0];
     ],
 )
 def test_bitreg_as_bit_6(profile: QIRProfile) -> None:
-    # https://github.com/CQCL/tket/issues/1896
+    # https://github.com/Quantinuum/tket/issues/1896
     qasm = """OPENQASM 2.0;
 include "hqslib1.inc";
 creg a[1];
@@ -217,7 +217,7 @@ a = a[0] + b[0];
     ],
 )
 def test_bitreg_as_bit_7(profile: QIRProfile) -> None:
-    # https://github.com/CQCL/tket/issues/1896
+    # https://github.com/Quantinuum/tket/issues/1896
     qasm = """OPENQASM 2.0;
 include "hqslib1.inc";
 creg a[1];
@@ -241,7 +241,7 @@ a[0] = a[0] + b[0];
     ],
 )
 def test_bitreg_as_bit_8(profile: QIRProfile) -> None:
-    # https://github.com/CQCL/tket/issues/1896
+    # https://github.com/Quantinuum/tket/issues/1896
     qasm = """OPENQASM 2.0;
 include "hqslib1.inc";
 creg a[1];

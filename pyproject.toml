@@ -3,7 +3,7 @@ name = "pytket-qir"
 dynamic = ["version"]
 requires-python = ">=3.10,<4.0"
 
-description = "Extension for pytket, "
+description = "Extension for pytket, providing functions for conversion into to qir."
 license = { file = "LICENSE" }
 readme = "README.md"
 authors = [

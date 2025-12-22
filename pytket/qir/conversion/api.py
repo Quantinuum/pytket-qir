@@ -16,6 +16,7 @@ from enum import Enum
 from typing import TYPE_CHECKING
 
 import pyqir
+
 from pytket._tket.unit_id import _TEMP_BIT_REG_BASE
 from pytket.circuit import Circuit, OpType
 from pytket.passes import scratch_reg_resize_pass
@@ -70,7 +71,7 @@ class ClassicalRegisterWidthError(Exception):
         super().__init__(msg)
 
 
-def pytket_to_qir(  # noqa: PLR0912, PLR0913, RET503
+def pytket_to_qir(  # noqa: PLR0912, PLR0913
     circ: Circuit,
     name: str = "Generated from input pytket circuit",
     qir_format: QIRFormat = QIRFormat.BINARY,

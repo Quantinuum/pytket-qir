@@ -20,6 +20,8 @@ from functools import partial
 
 import pyqir
 from pyqir import IntPredicate, Value
+
+from pytket import predicates
 from pytket.circuit import (
     BarrierOp,
     Bit,
@@ -72,8 +74,6 @@ from pytket.circuit.logic_exp import (
 from pytket.qasm.qasm import _retrieve_registers
 from pytket.transform import Transform
 from pytket.unit_id import UnitType
-
-from pytket import predicates
 
 from .gatesets import (
     FuncSpec,

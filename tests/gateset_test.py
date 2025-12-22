@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from pytket.circuit import OpType
-
 from pytket.qir.conversion.gatesets import _TK_TO_PYQIR
 
 

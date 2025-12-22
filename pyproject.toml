@@ -1,9 +1,9 @@
 [project]
-name = "pytket-TODOEXTNAME"
+name = "pytket-qir"
 dynamic = ["version"]
 requires-python = ">=3.10,<4.0"
 
-description = "Extension for pytket, TODOPYTKETEXT"
+description = "Extension for pytket, "
 license = { file = "LICENSE" }
 readme = "README.md"
 authors = [
@@ -26,24 +26,20 @@ classifiers = [
     "Topic :: Scientific/Engineering",
 ]
 dependencies = [
-    "pytket >= 2.7.0",
-    "TODOPYTKETEXT",
+    "pytket >= 2.11.0",
+    "pyqir ~= 0.10.9",
 ]
 
-[project.optional-dependencies]
-TODOOPTDEP = ["pytket >= 2.7.0"]
-
-
 [project.urls]
-documentation = "https://tket.quantinuum.com/extensions/pytket-TODOEXTNAME/index.html"
-source = "https://github.com/Quantinuum/pytket-TODOEXTNAME"
-tracker = "https://github.com/Quantinuum/pytket-TODOEXTNAME/issues"
+documentation = "https://tket.quantinuum.com/extensions/pytket-qir/index.html"
+source = "https://github.com/Quantinuum/pytket-qir"
+tracker = "https://github.com/Quantinuum/pytket-qir/issues"
 
 [tool.setuptools.packages]
 find = {}
 
 [tool.setuptools.dynamic]
-version = {attr = "_metadata.__extension_version__"}
+version = {attr = "pytket.qir._metadata.__extension_version__"}
 
 [build-system]
 requires = ["setuptools"]
@@ -58,5 +54,5 @@ dev-dependencies = [
     "hypothesis >=6.111.1,<7",
     "pre-commit >=3.8.0,<4",
     "pyupgrade >=2.29,<4.0",
-    "TODOPYTKETEXT",
+    "requests_mock",
 ]

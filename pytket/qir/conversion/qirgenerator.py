@@ -20,6 +20,8 @@ from functools import partial
 
 import pyqir
 from pyqir import IntPredicate, Value
+
+from pytket import predicates
 from pytket.circuit import (
     BarrierOp,
     Bit,
@@ -72,8 +74,6 @@ from pytket.circuit.logic_exp import (
 from pytket.qasm.qasm import _retrieve_registers
 from pytket.transform import Transform
 from pytket.unit_id import UnitType
-
-from pytket import predicates
 
 from .gatesets import (
     FuncSpec,
@@ -944,7 +944,7 @@ class AbstractQirGenerator:
                     ssa_args[0],
                 )
             case ClOp.RegDiv | ClOp.RegPow:
-                # https://github.com/CQCL/pytket-qir/issues/181
+                # https://github.com/Quantinuum/pytket-qir/issues/181
                 raise ValueError(f"Classical operation {expr_op} not supported")
             case _:
                 raise ValueError("Invalid classical operation")

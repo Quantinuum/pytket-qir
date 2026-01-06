@@ -16,6 +16,7 @@ from enum import Enum
 from typing import TYPE_CHECKING
 
 import pyqir
+
 from pytket._tket.unit_id import _TEMP_BIT_REG_BASE
 from pytket.circuit import Circuit, OpType
 from pytket.passes import scratch_reg_resize_pass
@@ -70,7 +71,7 @@ class ClassicalRegisterWidthError(Exception):
         super().__init__(msg)
 
 
-def pytket_to_qir(  # noqa: PLR0912, PLR0913, RET503
+def pytket_to_qir(  # noqa: PLR0912, PLR0913
     circ: Circuit,
     name: str = "Generated from input pytket circuit",
     qir_format: QIRFormat = QIRFormat.BINARY,
@@ -91,13 +92,13 @@ def pytket_to_qir(  # noqa: PLR0912, PLR0913, RET503
     :param profile: generates QIR corresponding to the selected profile:
 
       - Use ``QIRProfile.BASE`` for the base profile. See:
-        https://github.com/qir-alliance/qir-spec/blob/main/specification/under_development/profiles/Base_Profile.md
+        https://github.com/qir-alliance/qir-spec/blob/main/specification/profiles/Base_Profile.md
       - Use ``QIRProfile.ADAPTIVE`` for the adaptive profile. See:
-        https://github.com/qir-alliance/qir-spec/tree/main/specification/under_development/profiles/Adaptive_Profile.md
+        https://github.com/qir-alliance/qir-spec/blob/main/specification/profiles/Adaptive_Profile.md
       - Use ``QIRProfile.ADAPTIVE_CREGSIZE`` for the adaptive profile with additional
         truncation operations to assure that integers matching the classical
         registers have no unexpected set bits. See:
-        https://github.com/qir-alliance/qir-spec/tree/main/specification/under_development/profiles/Adaptive_Profile.md
+        https://github.com/qir-alliance/qir-spec/blob/main/specification/profiles/Adaptive_Profile.md
       - Use ``QIRProfile.PYTKET`` for QIR with additional functions for classical
         registers.
       - Use ``QIRProfile.AZUREBASE`` for the base profile with metadata for Azure
@@ -182,7 +183,7 @@ def pytket_to_qir(  # noqa: PLR0912, PLR0913, RET503
             return bitcode
         if qir_format == QIRFormat.STRING:
             return result
-        assert not "unsupported return type"  # type: ignore
+        assert not "unsupported return type"  # type: ignore  # noqa: RET503
 
     elif qir_generator.has_wasm:
         wasm_sar_dict: dict[str, str] = qir_generator.get_wasm_sar()
@@ -200,14 +201,14 @@ def pytket_to_qir(  # noqa: PLR0912, PLR0913, RET503
             return bitcode
         if qir_format == QIRFormat.STRING:
             return result
-        assert not "unsupported return type"  # type: ignore
+        assert not "unsupported return type"  # type: ignore  # noqa: RET503
 
     elif qir_format == QIRFormat.BINARY:
         return populated_module.module.bitcode()
     elif qir_format == QIRFormat.STRING:
         return populated_module.module.ir()
     else:
-        assert not "unsupported return type"  # type: ignore
+        assert not "unsupported return type"  # type: ignore  # noqa: RET503
 
 
 def check_circuit(

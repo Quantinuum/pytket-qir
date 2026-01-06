@@ -1,2 +1,2 @@
-include _metadata.py
-include pytket/extensions/qir/py.typed
+include pytket/qir/_metadata.py
+include pytket/qir/py.typed

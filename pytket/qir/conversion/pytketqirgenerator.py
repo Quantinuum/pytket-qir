@@ -16,6 +16,7 @@ from typing import cast
 
 import pyqir
 from pyqir import Value
+
 from pytket.circuit import (
     Bit,
     BitRegister,

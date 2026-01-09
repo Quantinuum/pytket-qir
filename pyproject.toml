@@ -46,6 +46,9 @@ version = {attr = "pytket.qir._metadata.__extension_version__"}
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
+[tool.uv]
+default-groups = "all"
+
 [dependency-groups]
 dev = [
     "pytest ~=9.0",

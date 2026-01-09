@@ -27,7 +27,7 @@ classifiers = [
 ]
 dependencies = [
     "pytket >= 2.11.0",
-    "pyqir ~= 0.10.9",
+    "pyqir ~= 0.11.1",
 ]
 
 [project.urls]
@@ -47,12 +47,12 @@ build-backend = "setuptools.build_meta"
 
 [tool.uv]
 dev-dependencies = [
-    "pytest >=8.3.2,<9",
+    "pytest ~=9.0",
     "pytest-timeout ~=2.4.0",
-    "ruff >=0.6.2,<0.7",
-    "mypy >=1.11.1,<2",
-    "hypothesis >=6.111.1,<7",
-    "pre-commit >=3.8.0,<4",
-    "pyupgrade >=2.29,<4.0",
+    "ruff ~=0.14.11,<0.15",
+    "mypy >=1.19.1,<2",
+    "hypothesis >=6.150.0,<7",
+    "pre-commit >=4.5.1,<5",
+    "pyupgrade >=3.21.2,<4.0",
     "requests_mock",
 ]

@@ -47,10 +47,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.uv]
-default-groups = "all"
-
-[dependency-groups]
-dev = [
+dev-dependencies = [
     "pytest ~=9.0",
     "pytest-timeout ~=2.4.0",
     "ruff ~=0.14.11,<0.15",

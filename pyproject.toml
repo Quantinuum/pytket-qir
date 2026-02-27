@@ -27,7 +27,7 @@ classifiers = [
 ]
 dependencies = [
     "pytket >= 2.13.0",
-    "pyqir ~= 0.11.1",
+    "pyqir ~= 0.12.3",
 ]
 
 [project.urls]

@@ -67,7 +67,7 @@ class BaseProfileQirGenerator(AbstractQirGenerator):
             pyqir.FunctionType(
                 pyqir.Type.void(self.module.module.context),
                 [
-                    pyqir.result_type(self.module.module.context),
+                    self.result_type,
                     pyqir.PointerType(pyqir.IntType(self.module.module.context, 8)),
                 ],
             ),

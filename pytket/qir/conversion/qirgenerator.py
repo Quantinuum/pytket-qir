@@ -191,10 +191,8 @@ class AbstractQirGenerator:
 
         self.qir_i1p_type = pyqir.PointerType(pyqir.IntType(self.module.context, 1))
         self.qir_bool_type = pyqir.IntType(self.module.context, 1)
-        #self.qubit_type = pyqir.ptr_id(self.module.context)
-        #self.result_type = pyqir.ptr_id(self.module.context)
         self.qubit_type = pyqir.PointerType(pyqir.IntType(self.module.context, 64))
-        self.result_type = pyqir.PointerType(pyqir.IntType(self.module.context, 64))        
+        self.result_type = pyqir.PointerType(pyqir.IntType(self.module.context, 64))
 
         self.cregs = _retrieve_registers(self.circuit.bits, BitRegister)  # type: ignore
         self.creg_size: dict[str, int] = {}

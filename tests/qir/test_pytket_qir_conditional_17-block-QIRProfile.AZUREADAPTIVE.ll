@@ -1,17 +1,14 @@
 ; ModuleID = 'test_pytket_qir_conditional_17-block'
 source_filename = "test_pytket_qir_conditional_17-block"
 
-%Qubit = type opaque
-%Result = type opaque
-
 @0 = internal constant [2 x i8] c"a\00"
 @1 = internal constant [2 x i8] c"b\00"
 @2 = internal constant [2 x i8] c"d\00"
 
 define void @main() #0 {
 entry:
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %0 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %0 = call i1 @__quantum__qis__read_result__body(ptr null)
   %1 = zext i1 %0 to i64
   %2 = mul i64 %1, 1
   %3 = or i64 %2, 0
@@ -24,8 +21,8 @@ entry:
   br i1 %9, label %condb0, label %contb0
 
 condb0:                                           ; preds = %entry
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %10 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %10 = call i1 @__quantum__qis__read_result__body(ptr null)
   %11 = zext i1 %10 to i64
   %12 = mul i64 %11, 1
   %13 = or i64 %12, 0
@@ -42,8 +39,8 @@ contb0:                                           ; preds = %condb0, %entry
   br i1 %20, label %condb1, label %contb1
 
 condb1:                                           ; preds = %contb0
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %21 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %21 = call i1 @__quantum__qis__read_result__body(ptr null)
   %22 = zext i1 %21 to i64
   %23 = mul i64 %22, 2
   %24 = or i64 %23, %18
@@ -60,8 +57,8 @@ contb1:                                           ; preds = %condb1, %contb0
   br i1 %31, label %condb2, label %contb2
 
 condb2:                                           ; preds = %contb1
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %32 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %32 = call i1 @__quantum__qis__read_result__body(ptr null)
   %33 = zext i1 %32 to i64
   %34 = mul i64 %33, 4
   %35 = or i64 %34, %29
@@ -78,8 +75,8 @@ contb2:                                           ; preds = %condb2, %contb1
   br i1 %42, label %condb3, label %contb3
 
 condb3:                                           ; preds = %contb2
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %43 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %43 = call i1 @__quantum__qis__read_result__body(ptr null)
   %44 = zext i1 %43 to i64
   %45 = mul i64 %44, 8
   %46 = or i64 %45, %40
@@ -96,8 +93,8 @@ contb3:                                           ; preds = %condb3, %contb2
   br i1 %53, label %condb4, label %contb4
 
 condb4:                                           ; preds = %contb3
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %54 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %54 = call i1 @__quantum__qis__read_result__body(ptr null)
   %55 = zext i1 %54 to i64
   %56 = mul i64 %55, 16
   %57 = or i64 %56, %51
@@ -114,8 +111,8 @@ contb4:                                           ; preds = %condb4, %contb3
   br i1 %64, label %condb5, label %contb5
 
 condb5:                                           ; preds = %contb4
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %65 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %65 = call i1 @__quantum__qis__read_result__body(ptr null)
   %66 = zext i1 %65 to i64
   %67 = mul i64 %66, 32
   %68 = or i64 %67, %62
@@ -132,8 +129,8 @@ contb5:                                           ; preds = %condb5, %contb4
   br i1 %75, label %condb6, label %contb6
 
 condb6:                                           ; preds = %contb5
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %76 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %76 = call i1 @__quantum__qis__read_result__body(ptr null)
   %77 = zext i1 %76 to i64
   %78 = mul i64 %77, 64
   %79 = or i64 %78, %73
@@ -150,8 +147,8 @@ contb6:                                           ; preds = %condb6, %contb5
   br i1 %86, label %condb7, label %contb7
 
 condb7:                                           ; preds = %contb6
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %87 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %87 = call i1 @__quantum__qis__read_result__body(ptr null)
   %88 = zext i1 %87 to i64
   %89 = mul i64 %88, 128
   %90 = or i64 %89, %84
@@ -168,8 +165,8 @@ contb7:                                           ; preds = %condb7, %contb6
   br i1 %97, label %condb8, label %contb8
 
 condb8:                                           ; preds = %contb7
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %98 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %98 = call i1 @__quantum__qis__read_result__body(ptr null)
   %99 = zext i1 %98 to i64
   %100 = mul i64 %99, 256
   %101 = or i64 %100, %95
@@ -186,8 +183,8 @@ contb8:                                           ; preds = %condb8, %contb7
   br i1 %108, label %condb9, label %contb9
 
 condb9:                                           ; preds = %contb8
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %109 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %109 = call i1 @__quantum__qis__read_result__body(ptr null)
   %110 = zext i1 %109 to i64
   %111 = mul i64 %110, 512
   %112 = or i64 %111, %106
@@ -233,8 +230,8 @@ contb10:                                          ; preds = %condb10, %contb9
   br i1 %142, label %condb11, label %contb11
 
 condb11:                                          ; preds = %contb10
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %143 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %143 = call i1 @__quantum__qis__read_result__body(ptr null)
   %144 = zext i1 %143 to i64
   %145 = mul i64 %144, 1
   %146 = or i64 %145, 0
@@ -280,8 +277,8 @@ contb12:                                          ; preds = %condb12, %contb11
   br i1 %176, label %condb13, label %contb13
 
 condb13:                                          ; preds = %contb12
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %177 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %177 = call i1 @__quantum__qis__read_result__body(ptr null)
   %178 = zext i1 %177 to i64
   %179 = mul i64 %178, 2
   %180 = or i64 %179, %151
@@ -298,8 +295,8 @@ contb13:                                          ; preds = %condb13, %contb12
   br i1 %187, label %condb14, label %contb14
 
 condb14:                                          ; preds = %contb13
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %188 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %188 = call i1 @__quantum__qis__read_result__body(ptr null)
   %189 = zext i1 %188 to i64
   %190 = mul i64 %189, 4
   %191 = or i64 %190, %185
@@ -316,8 +313,8 @@ contb14:                                          ; preds = %condb14, %contb13
   br i1 %198, label %condb15, label %contb15
 
 condb15:                                          ; preds = %contb14
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %199 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %199 = call i1 @__quantum__qis__read_result__body(ptr null)
   %200 = zext i1 %199 to i64
   %201 = mul i64 %200, 8
   %202 = or i64 %201, %196
@@ -334,8 +331,8 @@ contb15:                                          ; preds = %condb15, %contb14
   br i1 %209, label %condb16, label %contb16
 
 condb16:                                          ; preds = %contb15
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %210 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %210 = call i1 @__quantum__qis__read_result__body(ptr null)
   %211 = zext i1 %210 to i64
   %212 = mul i64 %211, 16
   %213 = or i64 %212, %207
@@ -352,8 +349,8 @@ contb16:                                          ; preds = %condb16, %contb15
   br i1 %220, label %condb17, label %contb17
 
 condb17:                                          ; preds = %contb16
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %221 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %221 = call i1 @__quantum__qis__read_result__body(ptr null)
   %222 = zext i1 %221 to i64
   %223 = mul i64 %222, 32
   %224 = or i64 %223, %218
@@ -370,8 +367,8 @@ contb17:                                          ; preds = %condb17, %contb16
   br i1 %231, label %condb18, label %contb18
 
 condb18:                                          ; preds = %contb17
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %232 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %232 = call i1 @__quantum__qis__read_result__body(ptr null)
   %233 = zext i1 %232 to i64
   %234 = mul i64 %233, 64
   %235 = or i64 %234, %229
@@ -388,8 +385,8 @@ contb18:                                          ; preds = %condb18, %contb17
   br i1 %242, label %condb19, label %contb19
 
 condb19:                                          ; preds = %contb18
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %243 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %243 = call i1 @__quantum__qis__read_result__body(ptr null)
   %244 = zext i1 %243 to i64
   %245 = mul i64 %244, 128
   %246 = or i64 %245, %240
@@ -406,8 +403,8 @@ contb19:                                          ; preds = %condb19, %contb18
   br i1 %253, label %condb20, label %contb20
 
 condb20:                                          ; preds = %contb19
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %254 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %254 = call i1 @__quantum__qis__read_result__body(ptr null)
   %255 = zext i1 %254 to i64
   %256 = mul i64 %255, 256
   %257 = or i64 %256, %251
@@ -424,8 +421,8 @@ contb20:                                          ; preds = %condb20, %contb19
   br i1 %264, label %condb21, label %contb21
 
 condb21:                                          ; preds = %contb20
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %265 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %265 = call i1 @__quantum__qis__read_result__body(ptr null)
   %266 = zext i1 %265 to i64
   %267 = mul i64 %266, 512
   %268 = or i64 %267, %262
@@ -442,8 +439,8 @@ contb21:                                          ; preds = %condb21, %contb20
   br i1 %275, label %condb22, label %contb22
 
 condb22:                                          ; preds = %contb21
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %276 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %276 = call i1 @__quantum__qis__read_result__body(ptr null)
   %277 = zext i1 %276 to i64
   %278 = mul i64 %277, 1024
   %279 = or i64 %278, %273
@@ -460,8 +457,8 @@ contb22:                                          ; preds = %condb22, %contb21
   br i1 %286, label %condb23, label %contb23
 
 condb23:                                          ; preds = %contb22
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %287 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %287 = call i1 @__quantum__qis__read_result__body(ptr null)
   %288 = zext i1 %287 to i64
   %289 = mul i64 %288, 2048
   %290 = or i64 %289, %284
@@ -478,8 +475,8 @@ contb23:                                          ; preds = %condb23, %contb22
   br i1 %297, label %condb24, label %contb24
 
 condb24:                                          ; preds = %contb23
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %298 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %298 = call i1 @__quantum__qis__read_result__body(ptr null)
   %299 = zext i1 %298 to i64
   %300 = mul i64 %299, 4096
   %301 = or i64 %300, %295
@@ -496,8 +493,8 @@ contb24:                                          ; preds = %condb24, %contb23
   br i1 %308, label %condb25, label %contb25
 
 condb25:                                          ; preds = %contb24
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %309 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %309 = call i1 @__quantum__qis__read_result__body(ptr null)
   %310 = zext i1 %309 to i64
   %311 = mul i64 %310, 8192
   %312 = or i64 %311, %306
@@ -514,8 +511,8 @@ contb25:                                          ; preds = %condb25, %contb24
   br i1 %319, label %condb26, label %contb26
 
 condb26:                                          ; preds = %contb25
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %320 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %320 = call i1 @__quantum__qis__read_result__body(ptr null)
   %321 = zext i1 %320 to i64
   %322 = mul i64 %321, 16384
   %323 = or i64 %322, %317
@@ -532,8 +529,8 @@ contb26:                                          ; preds = %condb26, %contb25
   br i1 %330, label %condb27, label %contb27
 
 condb27:                                          ; preds = %contb26
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %331 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %331 = call i1 @__quantum__qis__read_result__body(ptr null)
   %332 = zext i1 %331 to i64
   %333 = mul i64 %332, 32768
   %334 = or i64 %333, %328
@@ -550,8 +547,8 @@ contb27:                                          ; preds = %condb27, %contb26
   br i1 %341, label %condb28, label %contb28
 
 condb28:                                          ; preds = %contb27
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %342 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %342 = call i1 @__quantum__qis__read_result__body(ptr null)
   %343 = zext i1 %342 to i64
   %344 = mul i64 %343, 65536
   %345 = or i64 %344, %339
@@ -568,8 +565,8 @@ contb28:                                          ; preds = %condb28, %contb27
   br i1 %352, label %condb29, label %contb29
 
 condb29:                                          ; preds = %contb28
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %353 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %353 = call i1 @__quantum__qis__read_result__body(ptr null)
   %354 = zext i1 %353 to i64
   %355 = mul i64 %354, 131072
   %356 = or i64 %355, %350
@@ -586,8 +583,8 @@ contb29:                                          ; preds = %condb29, %contb28
   br i1 %363, label %condb30, label %contb30
 
 condb30:                                          ; preds = %contb29
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %364 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %364 = call i1 @__quantum__qis__read_result__body(ptr null)
   %365 = zext i1 %364 to i64
   %366 = mul i64 %365, 262144
   %367 = or i64 %366, %361
@@ -604,8 +601,8 @@ contb30:                                          ; preds = %condb30, %contb29
   br i1 %374, label %condb31, label %contb31
 
 condb31:                                          ; preds = %contb30
-  call void @__quantum__qis__mz__body(%Qubit* null, %Result* null)
-  %375 = call i1 @__quantum__qis__read_result__body(%Result* null)
+  call void @__quantum__qis__mz__body(ptr null, ptr null)
+  %375 = call i1 @__quantum__qis__read_result__body(ptr null)
   %376 = zext i1 %375 to i64
   %377 = mul i64 %376, 524288
   %378 = or i64 %377, %372
@@ -627,27 +624,27 @@ condb32:                                          ; preds = %contb31
 
 contb32:                                          ; preds = %condb32, %contb31
   %387 = phi i64 [ %386, %condb32 ], [ %383, %contb31 ]
-  call void @__quantum__rt__array_record_output(i64 3, i8* null)
-  call void @__quantum__rt__int_record_output(i64 %7, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @0, i32 0, i32 0))
-  call void @__quantum__rt__int_record_output(i64 %174, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @1, i32 0, i32 0))
-  call void @__quantum__rt__int_record_output(i64 %387, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @2, i32 0, i32 0))
+  call void @__quantum__rt__array_record_output(i64 3, ptr null)
+  call void @__quantum__rt__int_record_output(i64 %7, ptr @0)
+  call void @__quantum__rt__int_record_output(i64 %174, ptr @1)
+  call void @__quantum__rt__int_record_output(i64 %387, ptr @2)
   ret void
 }
 
-declare i1 @__quantum__qis__read_result__body(%Result*)
+declare i1 @__quantum__qis__read_result__body(ptr)
 
-declare void @__quantum__rt__int_record_output(i64, i8*)
+declare void @__quantum__rt__int_record_output(i64, ptr)
 
-declare void @__quantum__rt__array_record_output(i64, i8*)
+declare void @__quantum__rt__array_record_output(i64, ptr)
 
-declare void @__quantum__qis__mz__body(%Qubit*, %Result* writeonly) #1
+declare void @__quantum__qis__mz__body(ptr, ptr writeonly) #1
 
 attributes #0 = { "entry_point" "output_labeling_schema" "qir_profiles"="custom" "required_num_qubits"="1" "required_num_results"="1" }
 attributes #1 = { "irreversible" }
 
 !llvm.module.flags = !{!0, !1, !2, !3, !4, !5, !6, !7, !8, !9, !10}
 
-!0 = !{i32 1, !"qir_major_version", i32 1}
+!0 = !{i32 1, !"qir_major_version", i32 2}
 !1 = !{i32 7, !"qir_minor_version", i32 0}
 !2 = !{i32 1, !"dynamic_qubit_management", i1 false}
 !3 = !{i32 1, !"dynamic_result_management", i1 false}

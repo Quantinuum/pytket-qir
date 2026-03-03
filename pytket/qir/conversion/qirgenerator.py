@@ -344,7 +344,7 @@ class AbstractQirGenerator:
         if self.sleep[index] is None:
             paramlist = [self.qubit_type] * index
             paramlist.append(
-                pyqir.Type.double(self.module.module.context),
+                pyqir.Type.double(self.module.module.context),  # type: ignore
             )  # add float parameter
             self.sleep[index] = self.module.module.add_external_function(
                 "__quantum__qis__sleep__body",

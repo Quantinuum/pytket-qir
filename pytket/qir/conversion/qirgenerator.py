@@ -191,8 +191,8 @@ class AbstractQirGenerator:
 
         self.qir_i1p_type = pyqir.PointerType(pyqir.IntType(self.module.context, 1))
         self.qir_bool_type = pyqir.IntType(self.module.context, 1)
-        self.qubit_type = pyqir.qubit_type(self.module.context)
-        self.result_type = pyqir.result_type(self.module.context)
+        self.qubit_type = pyqir.PointerType(pyqir.IntType(self.module.context, 64))
+        self.result_type = pyqir.PointerType(pyqir.IntType(self.module.context, 64))
 
         self.cregs = _retrieve_registers(self.circuit.bits, BitRegister)  # type: ignore
         self.creg_size: dict[str, int] = {}
@@ -232,7 +232,7 @@ class AbstractQirGenerator:
             "__quantum__qis__read_result__body",
             pyqir.FunctionType(
                 pyqir.IntType(self.module.module.context, 1),
-                [pyqir.result_type(self.module.module.context)],
+                [self.result_type],
             ),
         )
 
@@ -294,7 +294,7 @@ class AbstractQirGenerator:
                 f"__quantum__qis__barrier{index}__body",
                 pyqir.FunctionType(
                     pyqir.Type.void(self.module.module.context),
-                    [pyqir.qubit_type(self.module.module.context)] * index,
+                    [self.qubit_type] * index,
                 ),
             )
 
@@ -310,7 +310,7 @@ class AbstractQirGenerator:
                 f"__quantum__qis__group{index}__body",
                 pyqir.FunctionType(
                     pyqir.Type.void(self.module.module.context),
-                    [pyqir.qubit_type(self.module.module.context)] * index,
+                    [self.qubit_type] * index,
                 ),
             )
 
@@ -326,7 +326,7 @@ class AbstractQirGenerator:
                 f"__quantum__qis__order{index}__body",
                 pyqir.FunctionType(
                     pyqir.Type.void(self.module.module.context),
-                    [pyqir.qubit_type(self.module.module.context)] * index,
+                    [self.qubit_type] * index,
                 ),
             )
 
@@ -342,9 +342,9 @@ class AbstractQirGenerator:
             raise ValueError("Sleep operation only allowed on one qubit")
 
         if self.sleep[index] is None:
-            paramlist = [pyqir.qubit_type(self.module.module.context)] * index
+            paramlist = [self.qubit_type] * index
             paramlist.append(
-                pyqir.Type.double(self.module.module.context),
+                pyqir.Type.double(self.module.module.context),  # type: ignore
             )  # add float parameter
             self.sleep[index] = self.module.module.add_external_function(
                 "__quantum__qis__sleep__body",
@@ -727,8 +727,8 @@ class AbstractQirGenerator:
                         pyqir.Type.void(self.module.module.context),
                         [
                             pyqir.Type.double(self.module.module.context),
-                            pyqir.qubit_type(self.module.module.context),
-                            pyqir.qubit_type(self.module.module.context),
+                            self.qubit_type,
+                            self.qubit_type,
                         ],
                     ),
                 )
@@ -756,7 +756,7 @@ class AbstractQirGenerator:
                         [
                             pyqir.Type.double(self.module.module.context),
                             pyqir.Type.double(self.module.module.context),
-                            pyqir.qubit_type(self.module.module.context),
+                            self.qubit_type,
                         ],
                     ),
                 )
@@ -788,8 +788,8 @@ class AbstractQirGenerator:
                             pyqir.Type.double(self.module.module.context),
                             pyqir.Type.double(self.module.module.context),
                             pyqir.Type.double(self.module.module.context),
-                            pyqir.qubit_type(self.module.module.context),
-                            pyqir.qubit_type(self.module.module.context),
+                            self.qubit_type,
+                            self.qubit_type,
                         ],
                     ),
                 )
@@ -823,8 +823,8 @@ class AbstractQirGenerator:
                     pyqir.FunctionType(
                         pyqir.Type.void(self.module.module.context),
                         [
-                            pyqir.qubit_type(self.module.module.context),
-                            pyqir.qubit_type(self.module.module.context),
+                            self.qubit_type,
+                            self.qubit_type,
                         ],
                     ),
                 )

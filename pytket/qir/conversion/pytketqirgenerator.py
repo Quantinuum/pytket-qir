@@ -115,7 +115,7 @@ class PytketQirGenerator(AbstractQirGenerator):
             pyqir.FunctionType(
                 pyqir.Type.void(self.module.module.context),
                 [
-                    pyqir.qubit_type(self.module.module.context),
+                    self.qubit_type,
                     self.qir_i1p_type,
                     self.qir_int_type,
                 ],

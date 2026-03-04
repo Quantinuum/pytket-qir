@@ -1,8 +1,6 @@
 ; ModuleID = 'test_pytket_qir_wasm_3-QIRProfile.ADAPTIVE_CREGSIZE'
 source_filename = "test_pytket_qir_wasm_3-QIRProfile.ADAPTIVE_CREGSIZE"
 
-%Result = type opaque
-
 @0 = internal constant [2 x i8] c"c\00"
 @1 = internal constant [3 x i8] c"c0\00"
 @2 = internal constant [3 x i8] c"c1\00"
@@ -15,15 +13,15 @@ entry:
   %3 = call i64 @add_something(i64 %2)
   %4 = trunc i64 %3 to i4
   %5 = zext i4 %4 to i64
-  call void @__quantum__rt__int_record_output(i64 0, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @0, i32 0, i32 0))
-  call void @__quantum__rt__int_record_output(i64 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @1, i32 0, i32 0))
-  call void @__quantum__rt__int_record_output(i64 %5, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @2, i32 0, i32 0))
+  call void @__quantum__rt__int_record_output(i64 0, ptr @0)
+  call void @__quantum__rt__int_record_output(i64 0, ptr @1)
+  call void @__quantum__rt__int_record_output(i64 %5, ptr @2)
   ret void
 }
 
-declare i1 @__quantum__qis__read_result__body(%Result*)
+declare i1 @__quantum__qis__read_result__body(ptr)
 
-declare void @__quantum__rt__int_record_output(i64, i8*)
+declare void @__quantum__rt__int_record_output(i64, ptr)
 
 declare i64 @add_something(i64) #1
 
@@ -33,7 +31,7 @@ attributes #1 = { "wasm" }
 
 !llvm.module.flags = !{!0, !1, !2, !3}
 
-!0 = !{i32 1, !"qir_major_version", i32 1}
+!0 = !{i32 1, !"qir_major_version", i32 2}
 !1 = !{i32 7, !"qir_minor_version", i32 0}
 !2 = !{i32 1, !"dynamic_qubit_management", i1 false}
 !3 = !{i32 1, !"dynamic_result_management", i1 false}

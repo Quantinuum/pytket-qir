@@ -3,8 +3,8 @@
 Changelog
 ~~~~~~~~~
 
-2.0.0rc0 (February 2026)
-------------------------
+2.0.0rc0 (March 2026)
+---------------------
 
 * Update pyqir minimium version requirement to 0.12.3.
 * Update to QIR 2.0

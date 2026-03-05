@@ -1,2 +1,2 @@
-__extension_version__ = "1.0.0"
+__extension_version__ = "2.0.0rc1"
 __extension_name__ = "pytket-qir"

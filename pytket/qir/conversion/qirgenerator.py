@@ -1079,7 +1079,7 @@ class AbstractQirGenerator:
         results = self._to_qis_results(bits)
         bits_qis: Sequence[Value] | None = None
         if type(optype) is BitWiseOp:
-            bits_qis = self._to_qis_bits(args)
+            bits_qis = self._to_qis_bits(args)  # type: ignore
         gate = self.module.gateset.tk_to_gateset(optype)
         if gate.func_spec != FuncSpec.BODY:
             func_name = gate.func_name.value + "_" + gate.func_spec.value

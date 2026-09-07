@@ -48,27 +48,27 @@ contb0:                                           ; preds = %condb0, %entry
   %21 = xor i1 %20, true
   call void @set_creg_bit(ptr %3, i64 0, i1 %21)
   %22 = call i64 @get_int_from_creg(ptr %2)
-  %23 = icmp sgt i64 2, %22
+  %23 = icmp sgt i64 %22, 2
   %24 = call i64 @get_int_from_creg(ptr %2)
-  %25 = icmp sgt i64 %24, 4294967295
+  %25 = icmp sgt i64 4294967295, %24
   %26 = and i1 %23, %25
   call void @set_creg_bit(ptr %4, i64 1, i1 %26)
   %27 = call i64 @get_int_from_creg(ptr %2)
-  %28 = icmp sgt i64 0, %27
+  %28 = icmp sgt i64 %27, 0
   %29 = call i64 @get_int_from_creg(ptr %2)
-  %30 = icmp sgt i64 %29, 2
+  %30 = icmp sgt i64 2, %29
   %31 = and i1 %28, %30
   call void @set_creg_bit(ptr %4, i64 2, i1 %31)
   %32 = call i64 @get_int_from_creg(ptr %2)
-  %33 = icmp sgt i64 0, %32
+  %33 = icmp sgt i64 %32, 0
   %34 = call i64 @get_int_from_creg(ptr %2)
-  %35 = icmp sgt i64 %34, 1
+  %35 = icmp sgt i64 1, %34
   %36 = and i1 %33, %35
   call void @set_creg_bit(ptr %4, i64 3, i1 %36)
   %37 = call i64 @get_int_from_creg(ptr %2)
-  %38 = icmp sgt i64 3, %37
+  %38 = icmp sgt i64 %37, 3
   %39 = call i64 @get_int_from_creg(ptr %2)
-  %40 = icmp sgt i64 %39, 4294967295
+  %40 = icmp sgt i64 4294967295, %39
   %41 = and i1 %38, %40
   call void @set_creg_bit(ptr %4, i64 4, i1 %41)
   %42 = call i64 @get_int_from_creg(ptr %2)

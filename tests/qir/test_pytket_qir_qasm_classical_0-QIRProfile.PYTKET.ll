@@ -74,9 +74,9 @@ contb0:                                           ; preds = %condb0, %entry
   %40 = xor i1 %39, true
   call void @set_creg_bit(ptr %3, i64 0, i1 %40)
   %41 = call i64 @get_int_from_creg(ptr %2)
-  %42 = icmp sgt i64 2, %41
+  %42 = icmp sgt i64 %41, 2
   %43 = call i64 @get_int_from_creg(ptr %2)
-  %44 = icmp sgt i64 %43, 4294967295
+  %44 = icmp sgt i64 4294967295, %43
   %45 = and i1 %42, %44
   call void @set_creg_bit(ptr %4, i64 1, i1 %45)
   %46 = call i1 @get_creg_bit(ptr %4, i64 1)

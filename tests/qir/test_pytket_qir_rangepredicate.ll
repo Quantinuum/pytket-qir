@@ -18,21 +18,21 @@ entry:
   %7 = icmp eq i64 0, %6
   call void @set_creg_bit(ptr %1, i64 2, i1 %7)
   %8 = call i64 @get_int_from_creg(ptr %0)
-  %9 = icmp sgt i64 2, %8
+  %9 = icmp sgt i64 %8, 2
   %10 = call i64 @get_int_from_creg(ptr %0)
-  %11 = icmp sgt i64 %10, -1
+  %11 = icmp sgt i64 -1, %10
   %12 = and i1 %9, %11
   call void @set_creg_bit(ptr %1, i64 3, i1 %12)
   %13 = call i64 @get_int_from_creg(ptr %0)
-  %14 = icmp sgt i64 0, %13
+  %14 = icmp sgt i64 %13, 0
   %15 = call i64 @get_int_from_creg(ptr %0)
-  %16 = icmp sgt i64 %15, 1
+  %16 = icmp sgt i64 1, %15
   %17 = and i1 %14, %16
   call void @set_creg_bit(ptr %1, i64 4, i1 %17)
   %18 = call i64 @get_int_from_creg(ptr %0)
-  %19 = icmp sgt i64 1, %18
+  %19 = icmp sgt i64 %18, 1
   %20 = call i64 @get_int_from_creg(ptr %0)
-  %21 = icmp sgt i64 %20, -1
+  %21 = icmp sgt i64 -1, %20
   %22 = and i1 %19, %21
   call void @set_creg_bit(ptr %1, i64 5, i1 %22)
   %23 = call i1 @get_creg_bit(ptr %1, i64 0)

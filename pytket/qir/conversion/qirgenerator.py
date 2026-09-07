@@ -651,14 +651,14 @@ class AbstractQirGenerator:
 
             lower_cond = self.module.module.builder.icmp(
                 pyqir.IntPredicate.SGT,
-                lower_qir,
                 self._get_i64_ssa_reg(registername),
+                lower_qir,
             )
 
             upper_cond = self.module.module.builder.icmp(
                 pyqir.IntPredicate.SGT,
-                self._get_i64_ssa_reg(registername),
                 upper_qir,
+                self._get_i64_ssa_reg(registername),
             )
 
             result = self.module.module.builder.and_(lower_cond, upper_cond)

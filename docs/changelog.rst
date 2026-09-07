@@ -3,6 +3,11 @@
 Changelog
 ~~~~~~~~~
 
+2.0.1 (September 2026)
+----------------------
+
+* Fix conversion of `RangePredicate`.
+
 2.0.0 (May 2026)
 ----------------
 

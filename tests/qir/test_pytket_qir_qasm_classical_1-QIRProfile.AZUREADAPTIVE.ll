@@ -23,14 +23,14 @@ condb1:                                           ; preds = %contb0
   br label %contb1
 
 contb1:                                           ; preds = %condb1, %contb0
-  br i1 false, label %condb2, label %contb2
+  br i1 true, label %condb2, label %contb2
 
 condb2:                                           ; preds = %contb1
   call void @__quantum__qis__h__body(ptr null)
   br label %contb2
 
 contb2:                                           ; preds = %condb2, %contb1
-  br i1 false, label %condb3, label %contb3
+  br i1 true, label %condb3, label %contb3
 
 condb3:                                           ; preds = %contb2
   call void @__quantum__qis__h__body(ptr null)
@@ -63,7 +63,7 @@ contb6:                                           ; preds = %condb6, %contb5
   call void @__quantum__rt__int_record_output(i64 0, ptr @1)
   call void @__quantum__rt__int_record_output(i64 0, ptr @2)
   call void @__quantum__rt__int_record_output(i64 1, ptr @3)
-  call void @__quantum__rt__int_record_output(i64 0, ptr @4)
+  call void @__quantum__rt__int_record_output(i64 12, ptr @4)
   ret void
 }
 

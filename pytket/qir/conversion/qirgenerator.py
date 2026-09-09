@@ -650,13 +650,13 @@ class AbstractQirGenerator:
             registername = args[0].reg_name
 
             lower_cond = self.module.module.builder.icmp(
-                pyqir.IntPredicate.SGE,
+                pyqir.IntPredicate.UGE,
                 self._get_i64_ssa_reg(registername),
                 lower_qir,
             )
 
             upper_cond = self.module.module.builder.icmp(
-                pyqir.IntPredicate.SGE,
+                pyqir.IntPredicate.UGE,
                 upper_qir,
                 self._get_i64_ssa_reg(registername),
             )

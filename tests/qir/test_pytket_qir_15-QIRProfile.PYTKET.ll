@@ -246,24 +246,24 @@ contb2:                                           ; preds = %condb2, %contb1
   %71 = icmp eq i64 1, %70
   call void @set_creg_bit(ptr %3, i64 4, i1 %71)
   %72 = call i64 @get_int_from_creg(ptr %0)
-  %73 = icmp sge i64 %72, 2
+  %73 = icmp uge i64 %72, 2
   %74 = call i64 @get_int_from_creg(ptr %0)
-  %75 = icmp sge i64 -1, %74
+  %75 = icmp uge i64 -1, %74
   %76 = and i1 %73, %75
   call void @set_creg_bit(ptr %3, i64 5, i1 %76)
   %77 = call i64 @get_int_from_creg(ptr %0)
   %78 = icmp eq i64 0, %77
   call void @set_creg_bit(ptr %3, i64 6, i1 %78)
   %79 = call i64 @get_int_from_creg(ptr %0)
-  %80 = icmp sge i64 %79, 1
+  %80 = icmp uge i64 %79, 1
   %81 = call i64 @get_int_from_creg(ptr %0)
-  %82 = icmp sge i64 -1, %81
+  %82 = icmp uge i64 -1, %81
   %83 = and i1 %80, %82
   call void @set_creg_bit(ptr %3, i64 7, i1 %83)
   %84 = call i64 @get_int_from_creg(ptr %0)
-  %85 = icmp sge i64 %84, 0
+  %85 = icmp uge i64 %84, 0
   %86 = call i64 @get_int_from_creg(ptr %0)
-  %87 = icmp sge i64 1, %86
+  %87 = icmp uge i64 1, %86
   %88 = and i1 %85, %87
   call void @set_creg_bit(ptr %3, i64 8, i1 %88)
   %89 = call i1 @get_creg_bit(ptr %0, i64 0)
